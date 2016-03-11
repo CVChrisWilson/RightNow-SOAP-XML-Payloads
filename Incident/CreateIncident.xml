@@ -1,0 +1,110 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Header>
+      <ns7:ClientInfoHeader soapenv:mustUnderstand="0" xmlns:ns7="urn:messages.ws.rightnow.com/v1_3">
+         <ns7:AppID>Basic Update</ns7:AppID>
+      </ns7:ClientInfoHeader>
+      <wsse:Security mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+         <wsse:UsernameToken>
+            <wsse:Username>nope</wsse:Username>
+            <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">nahhhhhh</wsse:Password>
+         </wsse:UsernameToken>
+      </wsse:Security>
+   </soapenv:Header>
+   <soapenv:Body>
+      <ns7:Create xmlns:ns7="urn:messages.ws.rightnow.com/v1_3">
+         <ns7:RNObjects xsi:type="ns4:Incident" xmlns:ns4="urn:objects.ws.rightnow.com/v1_3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <ns4:CustomFields xsi:type="ns2:GenericObject" xmlns:ns2="urn:generic.ws.rightnow.com/v1_3">
+               <ns2:GenericFields dataType="OBJECT" name="c">
+                  <ns2:DataValue>
+                     <ns2:ObjectValue xsi:type="ns2:GenericObject">
+                        <ns2:ObjectType>
+                           <ns2:TypeName>IncidentCustomFieldsc</ns2:TypeName>
+                        </ns2:ObjectType>
+                        <ns2:GenericFields dataType="NAMED_ID_LIST" name="type">
+                           <ns2:DataValue>
+                              <ns2:NamedIDValue>
+                                 <ID id="490" xmlns="urn:base.ws.rightnow.com/v1_3"/>
+                              </ns2:NamedIDValue>
+                           </ns2:DataValue>
+                        </ns2:GenericFields>
+                        <ns2:GenericFields dataType="NAMED_ID_LIST" name="complaint_sub_type">
+                           <ns2:DataValue>
+                              <ns2:NamedIDValue>
+                                 <ID id="494" xmlns="urn:base.ws.rightnow.com/v1_3"/>
+                              </ns2:NamedIDValue>
+                           </ns2:DataValue>
+                        </ns2:GenericFields>
+                        <ns2:GenericFields dataType="NAMED_ID_LIST" name="engagement_type">
+                           <ns2:DataValue>
+                              <ns2:NamedIDValue>
+                                 <ID id="496" xmlns="urn:base.ws.rightnow.com/v1_3"/>
+                              </ns2:NamedIDValue>
+                           </ns2:DataValue>
+                        </ns2:GenericFields>
+                        <ns2:GenericFields dataType="NAMED_ID_LIST" name="brt_type">
+                           <ns2:DataValue>
+                              <ns2:NamedIDValue>
+                                 <ID id="642" xmlns="urn:base.ws.rightnow.com/v1_3"/>
+                              </ns2:NamedIDValue>
+                           </ns2:DataValue>
+                        </ns2:GenericFields>
+                        <ns2:GenericFields dataType="NAMED_ID_LIST" name="handoff_type">
+                           <ns2:DataValue>
+                              <ns2:NamedIDValue>
+                                 <Name xmlns="urn:base.ws.rightnow.com/v1_3">Service Request</Name>
+                              </ns2:NamedIDValue>
+                           </ns2:DataValue>
+                        </ns2:GenericFields>
+                        <ns2:GenericFields dataType="DATE" name="pay_date">
+                           <ns2:DataValue>
+                              <ns2:DateValue>2015-12-31</ns2:DateValue>
+                           </ns2:DataValue>
+                        </ns2:GenericFields>
+                        <ns2:GenericFields dataType="NAMED_ID_LIST" name="source_system">
+                           <ns2:DataValue>
+                              <ns2:NamedIDValue>
+                                 <Name xmlns="urn:base.ws.rightnow.com/v1_3">eBusiness Suite</Name>
+                              </ns2:NamedIDValue>
+                           </ns2:DataValue>
+                        </ns2:GenericFields>
+                     </ns2:ObjectValue>
+                  </ns2:DataValue>
+               </ns2:GenericFields>
+            </ns4:CustomFields>
+            <ns4:PrimaryContact>
+               <ns4:Contact>
+                  <ID id="40859" xmlns="urn:base.ws.rightnow.com/v1_3"/>
+               </ns4:Contact>
+            </ns4:PrimaryContact>
+            <ns4:Queue>
+               <ID id="57" xmlns="urn:base.ws.rightnow.com/v1_3"/>
+            </ns4:Queue>
+            <ns4:Category>
+            	<ID id="1" xmlns="urn:base.ws.rightnow.com/v1_3"/>
+            </ns4:Category>
+            <ns4:StatusWithType>
+               <ns4:Status>
+                  <Name xmlns="urn:base.ws.rightnow.com/v1_3">Solved</Name>
+               </ns4:Status>
+            </ns4:StatusWithType>
+            <ns4:Subject>This incident was created with the connect web services API.</ns4:Subject>
+			<ns4:Threads>
+			  <ns4:ThreadList action="add">
+				<ns4:Channel>
+					<ID id="3" xmlns="urn:base.ws.rightnow.com/v1_3"/>
+				</ns4:Channel>
+				<ns4:EntryType>
+					<ID id="4" xmlns="urn:base.ws.rightnow.com/v1_3"/>
+				</ns4:EntryType>
+				<ns4:Text>incident thread text</ns4:Text>
+			   </ns4:ThreadList>
+			</ns4:Threads>
+            <!--<ns4:ReferenceNumber "urn:objects.ws.rightnow.com/v1_2" xmlns:itns="urn:oracle.cloud.adapter.rightnow/1214">23222</ns4:ReferenceNumber> AUTO ASSIGNMENT-->
+         </ns7:RNObjects>
+         <ns7:ProcessingOptions>
+            <ns7:SuppressExternalEvents>false</ns7:SuppressExternalEvents>
+            <ns7:SuppressRules>false</ns7:SuppressRules>
+         </ns7:ProcessingOptions>
+      </ns7:Create>
+   </soapenv:Body>
+</soapenv:Envelope>
